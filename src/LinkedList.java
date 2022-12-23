@@ -2,11 +2,6 @@ class Node {
     String value;
     Node next;
 
-    Node() {
-        value = null;
-        next = null;
-    }
-
     Node(String value) {
         this.value = value;
         next = null;
