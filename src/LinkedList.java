@@ -5,7 +5,7 @@ class Node {
     Node() {
         value = null;
         next = null;
-    };
+    }
 
     Node(String value) {
         this.value = value;
@@ -13,7 +13,7 @@ class Node {
     }
 }
 
-public class LinkedList extends Node {
+public class LinkedList {
     Node head;
 
     // creating and adding a new node
@@ -115,20 +115,3 @@ public class LinkedList extends Node {
         System.out.println("\nNode at the beginning of the loop: " + loop);
     }
 }
-
-// Explanation:
-//
-// The fast iterator is twice as fast as the slow one
-// m - length of list outside the loop
-// n - length of list loop
-// k - distance from the beginning of the loop to the node where the iterators overlapped (if loop exists)
-// x, y - number of cycles passed by the fast and slow iterator respectively
-//
-// m + n*x + k = 2(m + n*y + k)
-// m + k = n(x - 2y)
-//
-// (x-2y) is a cycle period, so m = n-k
-// It means if the slow iterator starts from the head and another continues through the loop with the same step,
-// they will overlap in the beginning of the loop
-
-
