@@ -70,8 +70,7 @@ public class LinkedList extends Node {
         iterFast = iterFast.next.next; // 2x
 
         // if slow = fast break, else continue till the end of the list
-        while (iterFast.next != null) {
-            if (iterSlow == iterFast) { break; }
+        while (iterFast.next != null && iterSlow != iterFast) {
             iterSlow = iterSlow.next;
             iterFast = iterFast.next.next;
         }
